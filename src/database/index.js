@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import pass from '../config/mongo';
+import mongo from '../config/mongo';
 
 class Database {
   constructor() {
@@ -9,7 +9,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose.connect(
-      `mongodb+srv://hugumoraes:${pass}@clustermain-vl5pc.mongodb.net/mywebsite?retryWrites=true&w=majority`,
+      `mongodb+srv://hugumoraes:${mongo.pass}@clustermain-vl5pc.mongodb.net/mywebsite?retryWrites=true&w=majority`,
       {
         useNewUrlParser: true,
         useFindAndModify: true,
